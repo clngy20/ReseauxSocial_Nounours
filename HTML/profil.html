@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nounours — Mon profil</title>
+    <link rel="stylesheet" href="../css/mains.css">
+</head>
+<body class="page-feed">
+
+    <!-- Barre de navigation -->
+    <nav class="feed-nav">
+        <a href="main.html" class="feed-nav-logo">
+            <span class="logo-icon">🐻</span>
+            Nounours
+        </a>
+        <div class="feed-nav-right">
+            <a href="feed.html" class="btn-outline" style="color: var(--brown-dark); text-decoration: none;">Retour au fil</a>
+            <button class="btn-danger" onclick="logout()">Quitter</button>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main class="feed-main">
+    <!-- Conteneur pour les deux colonnes -->
+    <div class="profile-container">
+
+        <!-- COLONNE DE GAUCHE : Profil -->
+        <div class="profile-card-column">
+            <div class="profile-card anim-1">
+                <!-- Header avec avatar et infos -->
+                <div class="profile-header">
+                    <div class="profile-avatar" id="profileAvatar"></div>
+                    <div class="profile-info">
+                        <h2 id="profileFullName">Prénom Nom</h2>
+                        <p class="profile-email" id="profileEmail">email@example.com</p>
+                        <div class="profile-badge">🐾 Membre de la famille Nounours</div>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="profile-actions anim-2">
+                    <a href="edit-profil.html" class="btn-primary">Modifier mon profil</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- COLONNE DE DROITE : Dashboard -->
+        <div class="profile-dashboard-column">
+            <div class="profile-dashboard anim-2">
+                <h3 class="dashboard-title">Mon tableau de bord</h3>
+
+                <div class="dashboard-stats">
+                    <div class="stats-card">
+                        <div class="stats-icon">📝</div>
+                        <div class="stats-info">
+                            <span class="stats-value" id="statPosts">0</span>
+                            <span class="stats-label">Posts publiés</span>
+                        </div>
+                    </div>
+
+                    <div class="stats-card">
+                        <div class="stats-icon">❤️</div>
+                        <div class="stats-info">
+                            <span class="stats-value" id="statLikes">0</span>
+                            <span class="stats-label">Likes reçus</span>
+                        </div>
+                    </div>
+
+                    <div class="stats-card">
+                        <div class="stats-icon">💬</div>
+                        <div class="stats-info">
+                            <span class="stats-value" id="statComments">0</span>
+                            <span class="stats-label">Commentaires reçus</span>
+                        </div>
+                    </div>
+
+                    <div class="stats-card">
+                        <div class="stats-icon">👥</div>
+                        <div class="stats-info">
+                            <span class="stats-value" id="statFollowers">0</span>
+                            <span class="stats-label">Followers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activité récente -->
+                <div class="dashboard-activity">
+                    <h4>🕒 Activité récente</h4>
+                    <div id="recentActivity" class="activity-list">
+                        <p class="activity-empty">Aucune activité récente...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <script src="../JS/storage.js"></script>
+    <script src="../JS/utils.js"></script>
+    <script src="../JS/profil.js"></script>
+</body>
+</html>

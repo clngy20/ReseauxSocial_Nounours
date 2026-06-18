@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nounours — Mes abonnements</title>
+    <link rel="stylesheet" href="../css/mains.css">
+</head>
+<body class="page-feed">
+
+    <!-- Navigation -->
+    <nav class="feed-nav">
+        <a href="main.html" class="feed-nav-logo">
+            <span class="logo-icon">🐻</span>
+            Nounours
+        </a>
+        <div class="feed-nav-right">
+            <a href="profil.html" class="user-puce" style="text-decoration: none; color: inherit;">
+                <div class="user-puce-avatar" id="currentUserAvatar"></div>
+                <span id="currentUserName"></span>
+            </a>
+            <a href="feed.html" class="btn-outline" style="color: var(--brown-dark); 
+            text-decoration:none;"
+            >Retour</a>
+            <button class="btn-danger" onclick="logout()">Quitter</button>
+        </div>
+    </nav>
+
+    <main class="feed-main">
+
+        <!-- Mes abonnements -->
+        <div class="subscription-header anim-1">
+            <h2 class="subscription-title">Mes abonnements 🐾</h2>
+            <p class="subscription-subtitle">Les gens que tu suis</p>
+        </div>
+
+        <div id="listeAbonnements" class="subscription-list anim-2">
+            <p class="activity-empty">Tu ne suis personne pour l'instant...</p>
+        </div>
+
+        <!-- Tous les utilisateurs -->
+        <div class="subscription-header anim-3" style="margin-top: 32px;">
+            <h2 class="subscription-title">Découvrir 🌸</h2>
+            <p class="subscription-subtitle">Tous les membres de la famille</p>
+        </div>
+
+        <div id="listeTousUtilisateurs" class="subscription-list anim-4"></div>
+
+    </main>
+
+    <script src="../JS/storage.js"></script>
+    <script src="../JS/utils.js"></script>
+    <script src="../JS/abonnement.js"></script>
+</body>
+</html>

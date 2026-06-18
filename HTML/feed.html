@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nounours — Fil d'actualité</title>
+    <link rel="stylesheet" href="../css/mains.css">
+</head>
+<body class="page-feed">
+
+    <!-- Barre de navigation -->
+    <nav class="feed-nav">
+        <a href="main.html" class="feed-nav-logo">
+            <span class="logo-icon">🐻</span>
+            Nounours
+        </a>
+        <div class="feed-nav-center">
+            <input type="text" id="search" placeholder="Rechercher un câlin...">
+            <select id="searchType" class="search-select">
+                <label>
+                    <option value="all">Tout
+                </label>
+                <label>
+                    <option value="posts">Posts
+                </label>
+                <label>
+                    <option value="users">Utilisateurs
+                </label>
+
+            </select>
+        </div>
+        <div class="feed-nav-right">
+            <a href="profil.html" class="user-puce" style="text-decoration: none; color: inherit;">
+                <div class="user-puce-avatar" id="currentUserAvatar"></div>
+                <span id="currentUserName"></span>
+            </a>
+            <button class="btn-danger" onclick="logout()">Quitter</button>
+        </div>
+    </nav>
+
+<!-- Mise en page : sidebar + contenu -->
+<div class="feed-layout">
+
+    <!-- Sidebar -->
+    <aside class="feed-sidebar">
+        <!-- Avatar -->
+        <div class="sidebar-avatar" id="sidebarAvatar"></div>
+        <!-- Navigation -->
+        <nav class="sidebar-nav">
+            <a href="profil.html" class="sidebar-btn">Profil</a>
+            <a href="abonnement.html" class="sidebar-btn">Abonnement</a>
+        </nav>
+    </aside>
+
+    <!-- Contenu principal -->
+    <main class="feed-main">
+        <!-- Composer -->
+        <!-- Composer -->
+<div class="post-composer">
+    <div class="composer-avatar" id="composerAvatar"></div>
+
+    <div class="composer-content">
+        <!-- Zone de texte -->
+        <textarea id="postContent" placeholder="Qu'est-ce qui te rend heureux·se aujourd'hui ? 🌸"></textarea>
+
+        <!-- Prévisualisation de l'image (sous la zone de texte) -->
+        <div class="image-preview-container">
+            <img id="postImagePreview" src="" alt="aperçu image" style="display: none;">
+        </div>
+
+        <!-- Boutons alignés à droite -->
+        <div class="composer-actions">
+            <label for="postImage" class="composer-img-btn">
+                Ajouter une image
+                <input type="file" id="postImage" accept="image/*" style="display:none;">
+            </label>
+            <div class="publish-container">
+                <p class="error-msg" id="postError" style="margin:0;"></p>
+                <button class="btn-publish" onclick="addPost()">Publier 🐾</button>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Posts -->
+        <div id="posts"></div>
+    </main>
+
+</div><!-- fin feed-layout -->
+
+    <script src="../JS/storage.js"></script>
+    <script src="../JS/utils.js"></script>
+    <script src="../JS/feed.js"></script>
+</body>
+</html>

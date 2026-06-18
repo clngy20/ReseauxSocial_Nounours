@@ -1,0 +1,5 @@
+/* Fichier de base qui importe les autres fichiers CSS */
+@import url("base.css");      /* Variables, animations, resets */
+@import url("layout.css");    /* Structure (navbar, sidebar, etc.) */
+@import url("composant.css"); /* Boutons, cartes, formulaires */
+@import url("pages.css");     /* Styles spécifiques par page */

@@ -1,0 +1,98 @@
+<!-- Dans page profil -> bouton modifier 
+ - Modification du profil connecté -->
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nounours - Modifier mon profil</title>
+    <link rel="stylesheet" href="../css/mains.css">
+</head>
+<body class="page-feed">
+    <!-- Barre de navigation -->
+     <nav class="feed-nav">
+        <a href="main.html" class="feed-nav-logo">
+            <span class="logo-icon">🐻</span>
+            Nounours
+        </a>
+        <div class="feed-nav-right">
+            <a href="profil.html" class="btn-outline" style="color: var(--brown-dark); text-decoration: none;">Retour</a>
+            <button class="btn-danger" onclick="logout()">Quitter</button>
+        </div>
+    </nav>
+    
+    <!-- Contenu -->
+     <main class="feed-main">
+        <div class="edit-card anim-1">
+            <!-- Avatar + nom + bouton changer d'avatar -->
+             <div class="edit-header">
+                <div class="conteneur-avatar">
+                    <div class="edit-avatar" id="editAvatar"></div>
+                </div> 
+                <span class="edit-header-name" id="editHeaderName">
+                    Prénom Nom
+                </span>
+                <button class="btn-change-avatar" onclick="document.getElementById('editAvatarInput').click()">
+                    Modifier mon avatar
+                </button>
+                <input type="file" id="editAvatarInput" accept="image/*" style="display:none;">
+             </div>
+
+             <!-- Formulaire -->
+            <div class="edit-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editName">
+                            Nom
+                        </label>
+                        <input type="text" id="editName" placeholder="Dupuy">
+                    </div>
+                    <div class="form-group">
+                        <label for="editFirstName">
+                            Prénom
+                        </label>
+                        <input type="text" id="editFirstName" placeholder="Manon">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="editMail">
+                        Email
+                    </label>
+                    <input type="email" id="editMail" placeholder="ton@mail.com">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="editPassword">
+                    Nouveau mot de passe
+                </label>
+                <input type="password" id="editPassword" placeholder="***********">
+            </div>
+
+            <div class="form-group">
+                <label for="ConfirmPassword">
+                    Confirmer votre nouveau mot de passe
+                </label>
+                <input type="password" id="ConfirmPassword" placeholder="***********">
+            </div>
+            <p class="error-msg" id="editError"></p>
+            <p class="success-msg" id="editSuccess"></p>
+
+            <div class="edit-actions">
+                <a href="profil.html" class="btn-cancel">
+                    Annuler
+                </a>
+
+                <button class="btn-primary btn-save" onclick="sauvegarderProfil()">
+                    Sauvegarder
+                </button>
+            </div>
+        </div>
+     </main>
+
+     <script src="../JS/storage.js"></script>
+     <script src="../JS/utils.js"></script>
+     <script src="../JS/edit-profil.js"></script>
+</body>
+</html>

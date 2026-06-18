@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nounours — Inscription</title>
+    <link rel="stylesheet" href="../css/mains.css">
+</head>
+<body class="page-auth">
+    <div class="auth-container">
+
+        <a href="main.html" class="auth-logo anim-1">
+            <span class="logo-icon">🐻</span>
+            Nounours
+        </a>
+
+        <div class="auth-card">
+            <div class="auth-bear">🌷</div>
+            <h2>Crée ton nid !</h2>
+            <p class="auth-sub">Rejoins la famille en quelques secondes 🐾</p>
+
+            <div class="avatar-preview-block anim-2">
+                <img id="regAvatarPreview" src="../img/avatarprofile.webp" alt="Avatar" class="avatar-preview-img">
+                <input type="file" id="regAvatar" accept="image/*" style="display:none;">
+                <button type="button" class="btn-primary btn-sm" onclick="document.getElementById('regAvatar').click()">
+                    🐾 Choisir une photo
+                </button>
+            </div>
+
+            <div class="form-row anim-3">
+                <div class="form-group">
+                    <label for="regName">Nom</label>
+                    <input type="text" id="regName" placeholder="Dupont">
+                </div>
+                <div class="form-group">
+                    <label for="regFirstname">Prénom</label>
+                    <input type="text" id="regFirstname" placeholder="Lina">
+                </div>
+            </div>
+
+            <div class="form-group anim-3">
+                <label for="regEmail">Email</label>
+                <input type="email" id="regEmail" placeholder="ton@email.com">
+            </div>
+
+            <div class="form-group anim-4">
+                <label for="regPassword">Mot de passe</label>
+                <input type="password" id="regPassword" placeholder="Minimum 6 caractères">
+            </div>
+
+            <div class="form-group anim-4">
+                <label for="regConfirm">Confirmation</label>
+                <input type="password" id="regConfirm" placeholder="Confirme ton mot de passe">
+            </div>
+
+            <p class="error-msg" id="registerError"></p>
+
+            <div class="anim-5">
+                <button class="btn-primary" onclick="register()">🐻 Rejoindre la famille</button>
+            </div>
+
+            <p class="auth-switch anim-5">Déjà un compte ? <a href="login.html">Se connecter 🌸</a></p>
+        </div>
+
+    </div>
+
+    <script src="../JS/storage.js"></script>
+    <script src="../JS/utils.js"></script>
+    <script src="../JS/auth.js"></script>
+</body>
+</html>

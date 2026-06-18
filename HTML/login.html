@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nounours - Connexion</title>
+    <link rel="stylesheet" href="../css/mains.css">
+</head>
+     <body class="page-auth">
+    <div class="auth-container">
+
+        <a href="main.html" class="auth-logo anim-1">
+            <span class="logo-icon">🐻</span>
+            Nounours
+        </a>
+
+        <div class="auth-card">
+            <div class="auth-bear">🐻</div>
+            <h2>Bon retour !</h2>
+            <p class="auth-sub">On t'attendait avec impatience 🌸</p>
+
+            <div class="form-group anim-2">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" placeholder="ton@email.com" autocomplete="email">
+            </div>
+
+            <div class="form-group anim-3">
+                <label for="loginPassword">Mot de passe</label>
+                <input type="password" id="loginPassword" placeholder="••••••••">
+            </div>
+
+            <p class="error-msg" id="loginError"></p>
+
+            <div class="anim-4">
+                <button class="btn-primary" onclick="login()">Se connecter 🐾</button>
+            </div>
+
+            <p class="auth-switch anim-5">Pas encore de compte ? <a href="register.html">Rejoindre la famille ✨</a></p>
+        </div>
+
+    </div>
+
+<script src="../JS/storage.js"></script>
+<script src="../JS/utils.js"></script>
+<script src="../JS/auth.js"></script>
+</body>
+</html>
