@@ -13,31 +13,33 @@ Il permet de :
 - Modifier ses informations de profil
 
 ## Structure du projet
-|Nnounours
-- |- css /
-  |   |- base.css 	#Variables CSS, resets, animations
-  |   |- layout.css 	#Structure (navbar, sidebar, conteneurs)
-  |   |- composant.css 	#Composants (boutons, cartes, formulaires)
-  |   |- pages.css 	#Styles spécifiques par page
-  |   |- main.css 	#Fichier principal
-  |
-  |- JS/
-  |   |- storage.js 	#Gestion du localStorage
-  |   |- utils.js		#Fonctions utilitaires
-  |   |- auth.js		#Authentification
-  |   |- feed.js		#Gestion des posts
-  |   |- profil.js	#Affichage du profil
-  |   |-
-  |
-  |- HTML /
-  |   |- main.htlml
-  |   |- login.html
-  |   |- register.html
-  |   |- welcome.html
-  |   |- feed.html
-  |   |- profil.html
-  |   |- edit-profil.html
-  |   |- abonnement.html
+/Nounours
+├── 📁 img/
+├── 📁 JS/
+│   ├── storage.js 	
+│   ├── utils.js		
+│   ├── auth.js
+│   ├── welcome.js
+│   ├── feed.js
+│   ├── profil.js
+│   ├── abonnement.js
+│   └── edit-profil.js
+├── 📁 CSS/
+│   ├── base.css 	#Variables CSS, resets, animations
+│   ├── layout.css 	#Structure (navbar, sidebar, conteneurs)
+│   ├── composant.css 	#Composants (boutons, cartes, formulaires)
+│   ├── pages.css 	#Styles spécifiques par page
+│   ├── main.css 	#Fichier principal
+├── 📁 HTML/      
+│   ├── main.html
+│   ├── login.html
+│   ├── register.html
+│   ├── welcome.html
+│   ├── feed.html
+│   ├── profil.html
+│   ├── edit-profil
+│   └── abonnement.html
+
 
 ## Fonctionnalités
 
